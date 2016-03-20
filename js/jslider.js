@@ -6,8 +6,8 @@ function jslider_adaptive(){
         if (height>adaptive_height){
             $(this).css('padding-bottom','');
         }else{
-            height = adaptive_height;
-            if (height > max_height){height = max_height;}
+            //height = adaptive_height;
+            if (adaptive_height > max_height){height = max_height;}
             $(this).css('padding-bottom',height+'px');
         }
     });
