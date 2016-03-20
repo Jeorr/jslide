@@ -19,6 +19,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+    console.log($(window).height());
     jslider_adaptive(); 
 });
 
