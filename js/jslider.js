@@ -1,19 +1,5 @@
 function jslider_adaptive(){
-    $(".jslider .sliders").each(function(index) {
-        var max = true;
-        var height = parseInt($(this).css('padding-bottom').replace('px',''));
-        var max_height = parseInt($(this).parents('.jslider').parent().height());
-        if (height > max_height){
-            height = max_height;
-        }else{
-            max  = false;
-        }
-        if (max){
-            $(this).css('padding-bottom',height+'px');
-        }else{
-            $(this).css('padding-bottom','');
-        }
-    });
+  
 }
 
 $(document).ready(function() {
