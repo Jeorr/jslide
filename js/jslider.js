@@ -1,3 +1,28 @@
+function jslider_adaptive(){
+    $(".jslider .sliders").each(function(index) {
+        var max = false;
+        var height = parseInt($(this).css('padding-bottom').replace('px',''));
+        if (height > $(window).height()){
+            height = $(window).height();
+            max  = true;
+        }
+        if (max){
+            console.log(height);
+            $(this).css('padding-bottom',height+'px');
+        }else{
+            $(this).css('padding-bottom','');
+        }
+    });
+}
+
+$(document).ready(function() {
+     jslider_adaptive();  
+});
+
+$(window).resize(function() {
+    jslider_adaptive(); 
+});
+
 function jslide_register(selector,listType,delay){
     var curSlideN = 0;
     var active = false;
