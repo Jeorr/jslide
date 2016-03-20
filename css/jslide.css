@@ -1,0 +1,61 @@
+.jslider{    
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.sliders{
+    position: relative;
+    background: #000;
+    width: 100%;
+    padding-bottom: 70%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.slider{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-size: contain !important;
+    opacity: 0;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.slider:nth-child(1){
+    opacity: 1;
+}
+
+.nav{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+} 
+
+.nav i{
+    display: inline-block;
+    vertical-align: top;
+    width:20px;
+    height:20px;
+    background: red;
+}
+.prev,.next{
+    display: block;
+    position: absolute;
+    width:20px;
+    height:20px;
+    background: red;
+    top:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    z-index:10;
+}
+.next{
+    right:0;
+    left:auto;
+}
