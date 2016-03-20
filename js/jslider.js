@@ -2,7 +2,7 @@ function jslider_adaptive(){
     $(".jslider .sliders").each(function(index) {
         var max = false;
         var height = parseInt($(this).css('padding-bottom').replace('px',''));
-        if (height > $(window).height()){
+        if (height >= $(window).height()){
             height = $(window).height();
             max  = true;
         }
@@ -19,7 +19,6 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    console.log($(window).height());
     jslider_adaptive(); 
 });
 
