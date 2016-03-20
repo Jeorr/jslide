@@ -13,6 +13,13 @@
     top: 0;
     overflow: hidden;
 }
+.jslider_resizer{
+    position: absolute;
+    width: 100%;
+    padding-bottom: 70%;
+    left: 0;
+    top: 0;
+}
 .slider{
     width:100%;
     height:100%;
