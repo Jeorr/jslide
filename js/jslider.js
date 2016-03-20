@@ -1,14 +1,12 @@
 function jslider_adaptive(){
     $(".jslider .sliders").each(function(index) {
-        var height = parseInt($(this).css('padding-bottom').replace('px',''));
-        var max_height = parseInt($(this).parents('.jslider').height());
+        //var height = parseInt($(this).css('padding-bottom').replace('px',''));
+        //var max_height = parseInt($(this).parents('.jslider').height());
         var adaptive_height = parseInt($(this).parents('.jslider').find('.jslider_resizer').css('padding-bottom').replace('px',''));
-        if (height>adaptive_height){
-            $(this).css('padding-bottom','');
-        }else{
-            //height = adaptive_height;
-            if (adaptive_height > max_height){height = max_height;}
-            $(this).css('padding-bottom',height+'px');
+        $(this).css('padding-bottom',adaptive_height+'px');
+        var max_height = parseInt($(this).parents('.jslider').height());
+        if (adaptive_height >= max_height){
+            $(this).css('padding-bottom',max_height+'px');
         }
     });
 }
