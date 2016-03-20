@@ -7,7 +7,6 @@ function jslider_adaptive(){
             max  = true;
         }
         if (max){
-            console.log(height);
             $(this).css('padding-bottom',height+'px');
         }else{
             $(this).css('padding-bottom','');
@@ -23,7 +22,7 @@ $(window).resize(function() {
     jslider_adaptive(); 
 });
 
-function jslide_register(selector,listType,delay){
+function jslider_register(selector,listType,delay){
     var curSlideN = 0;
     var active = false;
     var renderSpeed = 1;
