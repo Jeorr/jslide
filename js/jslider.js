@@ -1,9 +1,17 @@
 function jslider_adaptive(){
-  
+    var height = parseInt($(this).css('padding-bottom').replace('px',''));
+    var max_height = parseInt($(this).parents('.jslider').height());
+    var adaptive_height = parseInt($(this).parents('.jslider').find('.jslider_resizer').css('padding-bottom').replace('px',''));
+    if (height > max_height){
+        height = max_height;
+    }else{
+        height = adaptive_height;
+    }
+    $(this).css('padding-bottom',height+'px');
 }
 
 $(document).ready(function() {
-     jslider_adaptive();  
+    jslider_adaptive();  
 });
 
 $(window).resize(function() {
