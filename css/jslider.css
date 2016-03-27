@@ -26,7 +26,6 @@
     position: absolute;
     background-size: contain !important;
     opacity: 0;
-    background-color: #000;
     background-repeat: no-repeat;
     background-position: center center;
 }
